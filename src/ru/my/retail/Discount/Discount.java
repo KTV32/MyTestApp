@@ -1,14 +1,14 @@
-package ru.my.retail.Discount;
+package ru.my.retail.discount;
 
-import ru.my.retail.ShopApp;
-import ru.my.retail.product.Lemonade;
+
 import ru.my.retail.product.Product;
+
+import java.util.Objects;
 
 public class Discount {
 
     private float discountOnLemonade;
     private float discountOnJuice;
-
 
 
     public Discount(float discountOnLemonade, float discountOnJuice){
@@ -18,16 +18,14 @@ public class Discount {
     }
 
     public void discountsAreValid1(Product product) {
-        if (product.getName() == "Buratino")
+        if (Objects.equals(product.getName(), "Buratino"))
             product.price = product.price - (product.price * this.discountOnLemonade / 100);
     }
     public void discountsAreValid2(Product product){
 
-        if (product.getName() == "Rich")
+        if (Objects.equals(product.getName(), "Rich"))
             product.price = product.price - (product.price * this.discountOnJuice / 100);
     }
-
-
 
 
     public float getDiscountOnLemonade() {

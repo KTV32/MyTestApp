@@ -1,6 +1,6 @@
 package ru.my.retail.basket;
 
-import ru.my.retail.product.Lemonade;
+
 import ru.my.retail.product.Product;
 
 public class Basket {
@@ -17,8 +17,6 @@ public class Basket {
 
 
     }
-
-
 
 
     public void addProduct(Product product){
@@ -40,8 +38,6 @@ public class Basket {
 
 
         }
-
-
 
 
     public Product[] getProducts(){

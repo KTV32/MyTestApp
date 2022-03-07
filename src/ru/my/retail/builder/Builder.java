@@ -1,10 +1,8 @@
 package ru.my.retail.builder;
 
-import ru.my.retail.client.Client;
 import ru.my.retail.discount.Discount;
 import ru.my.retail.product.Juice;
 import ru.my.retail.product.Lemonade;
-
 import java.util.Objects;
 
 public class Builder {
@@ -48,5 +46,13 @@ public class Builder {
         }
         return lemonade;
     }
+    public static Juice buildJuice3() {
+        Juice juice3 = new Juice("Ya", 105);
+        if (Objects.equals(juice3.getStatus(), " в наличии ")) {
+            System.out.println(juice3.getName() + juice3.getStatus());
+        }
+        return juice3;
+    }
+
 
 }

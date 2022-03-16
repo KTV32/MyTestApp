@@ -6,10 +6,14 @@ import java.util.Objects;
 public class Builder {
     public static void buildDiscount(Lemonade lemonade, Juice juice) {
         Discount discount = new Discount(15, 20);
+        while (lemonade.price >= 45){
         discount.discountsAreValid1(lemonade);
-        discount.discountsAreValid2(juice);
-        System.out.println("Скидка на " + lemonade.getName() + " = " + discount.getDiscountOnLemonade() + " %");
-        System.out.println("Скидка на " + juice.getName() + " = " + discount.getDiscountOnJuice() + " %");
+            System.out.println("Скидка на " + lemonade.getName() + " = " + discount.getDiscountOnLemonade() + " %");
+        }
+        while (juice.price >= 95) {
+            discount.discountsAreValid2(juice);
+            System.out.println("Скидка на " + juice.getName() + " = " + discount.getDiscountOnJuice() + " %");
+        }
     }
     public static Juice buildJuice2() {
         Juice juice2 = new Juice("Dobriy", 90);

@@ -11,9 +11,10 @@ public class Client {
     public String getName() {
         return name;
     }
-    public void selects(Product product){
+    public Product selects(Product product){
         basket.addProduct(product);
         System.out.println(name + " выбрал " + product + " и положил его в корзину");
+      return product;
     }
     public void pays(Product product){
         System.out.println(name + " оплатил " + product);

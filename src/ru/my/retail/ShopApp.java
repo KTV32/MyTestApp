@@ -23,11 +23,6 @@ public class ShopApp {
         warehouse1.add(juice2);
         warehouse1.add(juice3);
         warehouse1.add(new Lemonade("Cola", 87));
-        Petya.selects(lemonade);
-        Petya.selects(juice);
-        Petya.selects(juice2);
-        Petya.selects(lemonade2);
-        Petya.selects(juice3);
         warehouse1.remove(Petya.selects(lemonade));
         warehouse1.remove(Petya.selects(juice));
         warehouse1.remove(Petya.selects(juice2));
